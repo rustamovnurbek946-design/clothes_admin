@@ -23,14 +23,14 @@ export default function Sidebar() {
       {/* Toggle button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed top-4 left-4 p-2 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition-all"
+        className="fixed top-4 left-4 p-2 bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-700 transition-all"
       >
-          <Bars3Icon className="h-6 w-6" />
+        <Bars3Icon className="h-6 w-6" />
       </button>
 
       {/* Sidebar panel */}
       <aside
-        className={`z-20 fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-indigo-700 to-blue-600 text-white shadow-2xl transform transition-transform duration-300 ${
+        className={`z-20 fixed top-0 left-0 h-full w-64 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white shadow-2xl transform transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -64,7 +64,6 @@ export default function Sidebar() {
           </p>
         </div>
       </aside>
-
-    </>   
+    </>
   );
 }

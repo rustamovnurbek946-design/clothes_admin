@@ -7,7 +7,7 @@ import {
   MapPinIcon,
 } from "@heroicons/react/24/outline";
 
-export default function Profile() {
+export default function Accaunt() {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-[#1c2230] via-[#202a3c] to-[#2b3447] px-4">
       <motion.div
@@ -28,7 +28,7 @@ export default function Profile() {
           </div>
           <div className="ml-5">
             <h2 className="text-xl font-bold text-white">Nurbek Styles</h2>
-            <p className="text-sm text-blue-400 font-medium">🐱 В сети</p>
+            <p className="text-sm text-blue-400 font-medium">🐱 Online</p>
           </div>
         </div>
 
@@ -42,8 +42,7 @@ export default function Profile() {
           <div className="flex items-center gap-3">
             <UserIcon className="h-5 w-5 text-blue-400" />
             <p className="text-gray-400 leading-relaxed">
-              “Men moda orqali o‘z fikrimni ifoda etaman.
-              Har bir kiyim — bu mening xarakterimning bir bo‘lagi.”
+              “Men moda orqali o‘z fikrimni ifoda etaman. Har bir kiyim — bu mening xarakterimning bir bo‘lagi.”
             </p>
           </div>
 
@@ -97,7 +96,7 @@ export default function Profile() {
         <div className="mt-10 text-sm leading-relaxed text-gray-400">
           <p>
             🌟 <span className="text-blue-400 font-semibold">Fashion is identity</span> —
-            biz kiyimni faqat kiyish uchun emas, o‘zligimizni ifoda etish uchun tanlaymiz.
+            Biz kiyimni faqat kiyish uchun emas, o‘zligimizni ifoda etish uchun tanlaymiz.
             Har bir libos — bu sizning kayfiyatingiz, kuchingiz va hikoyangiz.
           </p>
         </div>

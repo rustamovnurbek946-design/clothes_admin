@@ -1,4 +1,3 @@
-import { use } from "react";
 import inctance from "../axios";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
@@ -12,7 +11,6 @@ import {
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
 
 const Products = () => {
   const queryClient = useQueryClient();
@@ -38,8 +36,8 @@ const Products = () => {
         title: "✅ O'chirildi!",
         text: "Kiyim muvaffaqiyatli o‘chirildi 👔",
         icon: "success",
-        background: "#f9fafb",
-        color: "#1f2937",
+        background: "#1f2937",
+        color: "#f9fafb",
         timer: 2000,
         showConfirmButton: false,
         toast: true,
@@ -65,8 +63,8 @@ const Products = () => {
       cancelButtonColor: "#6b7280",
       confirmButtonText: "Ha, o'chir!",
       cancelButtonText: "Bekor qilish",
-      background: "#f9fafb",
-      color: "#1f2937",
+      background: "#1f2937",
+      color: "#f9fafb",
       reverseButtons: true,
     }).then((result) => {
       if (result.isConfirmed) {
@@ -77,23 +75,23 @@ const Products = () => {
 
   if (isLoading)
     return (
-      <div className="text-center text-gray-600 mt-10 text-lg animate-pulse">
+      <div className="text-center text-indigo-400 mt-10 text-lg animate-pulse">
         Loading...
       </div>
     );
   if (error)
     return (
-      <div className="text-center text-red-500 mt-10">{error.message}</div>
+      <div className="text-center text-red-400 mt-10">{error.message}</div>
     );
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-blue-50">
+    <div className="flex flex-col min-h-screen bg-gray-900">
       {/* === Cards === */}
-      <div className="grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-10 py-10 pl-20">
+      <div className="grid flex-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-10 py-10">
         {data?.map((clothe) => (
           <Card
             key={clothe.id}
-            className="w-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-white/90 backdrop-blur-md border border-gray-100 shadow-md rounded-2xl"
+            className="w-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl bg-gray-800/80 backdrop-blur-md border border-gray-700 shadow-md rounded-2xl"
           >
             <CardHeader
               shadow={false}
@@ -105,7 +103,7 @@ const Products = () => {
                 alt={clothe.name}
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
               />
-              <span className="absolute top-3 left-3 bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+              <span className="absolute top-3 left-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
                 {clothe.price} so'm
               </span>
             </CardHeader>
@@ -113,8 +111,8 @@ const Products = () => {
             <CardBody className="p-5">
               <div className="mb-2 flex items-center justify-between">
                 <Typography
-                  color="blue-gray"
-                  className="font-semibold text-lg text-gray-800"
+                  color="white"
+                  className="font-semibold text-lg"
                 >
                   {clothe.name}
                 </Typography>
@@ -122,7 +120,7 @@ const Products = () => {
               <Typography
                 variant="small"
                 color="gray"
-                className="font-normal opacity-80 leading-relaxed"
+                className="font-normal opacity-80 leading-relaxed text-gray-300"
               >
                 {clothe.desc}
               </Typography>
@@ -133,7 +131,7 @@ const Products = () => {
                 <Button
                   ripple={false}
                   fullWidth={true}
-                  className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300"
+                  className="bg-gradient-to-r  text-white shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300"
                 >
                   Update
                 </Button>
@@ -152,13 +150,13 @@ const Products = () => {
       </div>
 
       {/* === FOOTER === */}
-      <footer className="bg-white/70 backdrop-blur-md border-t border-gray-200 shadow-inner py-6 mt-auto">
+      <footer className="bg-gray-800/80 backdrop-blur-md border-t border-gray-700 shadow-inner py-6 mt-auto">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-600 text-sm text-center sm:text-left">
-            © {new Date().getFullYear()} <span className="font-semibold text-indigo-600">Clothify</span> — All Rights Reserved 👕
+          <p className="text-gray-300 text-sm text-center sm:text-left">
+            © {new Date().getFullYear()} <span className="font-semibold text-indigo-500">Clothify</span> — All Rights Reserved 👕
           </p>
 
-          <div className="flex gap-5 text-gray-500 text-xl">
+          <div className="flex gap-5 text-gray-400 text-xl">
             <a
               href="#"
               className="hover:text-indigo-500 transition-colors duration-300"
@@ -173,7 +171,7 @@ const Products = () => {
             </a>
             <a
               href="#"
-              className="hover:text-gray-800 transition-colors duration-300"
+              className="hover:text-gray-100 transition-colors duration-300"
             >
               <i className="fa-brands fa-github"></i>
             </a>
